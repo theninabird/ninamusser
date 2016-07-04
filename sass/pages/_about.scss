@@ -1,0 +1,57 @@
+body.about .site-brand-img {
+	background-image: url('../images/n03.png');
+}
+
+body.about {
+	@include page-color(#ff5500);
+}
+
+.about-image {
+	text-align: center;
+}
+
+.about-image img {
+	width: 100%;
+}
+
+.about-text {
+	text-align: center;
+}
+
+.about-text p {
+	font-family: 'Roboto Slab';
+	font-size: 20px;
+	color: #555;
+}
+
+.social-media img {
+	margin:0 10px;
+}
+
+.social-media img:hover {
+	opacity: .8;
+	@include transition(.2s opacity ease-in);
+}
+
+@media (min-width: 750px) {
+	.about-row {
+		display: flex;
+	}
+
+	.about-image {
+		flex: 1;
+		@include span(6);
+	}
+
+	.about-text-wrapper {
+		flex: 1;
+		@include span(6 last);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.about-text {
+
+	}
+}

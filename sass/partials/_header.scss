@@ -1,0 +1,72 @@
+@import "grids";
+@import "compass";
+@import "../modules/all";
+
+.banner, .banner .container, nav {
+	height: auto;
+	text-align: center;
+	//background-color: black;
+}
+
+.site-brand-img {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	margin: 10px auto;
+	background-size: 150px;
+}
+
+.site-title-top {
+	font-family: 'Raleway';
+	font-weight: 300;
+	font-size: 28px;
+}
+
+.site-title-bottom {
+	font-family: 'Open Sans Condensed';
+	font-size: 28px;
+}
+
+nav {
+	height: auto;
+}
+
+// @media (min-width: 801px) {
+// 	.banner, .banner .container, nav {
+// 	height: $site-brand-height + $nav-height;
+// 	margin: 0px 30px;
+// }
+
+// 	.site-brand {
+
+// 		margin: 0;
+// 	}
+// }
+
+@media (min-width: 1075px) {
+	.banner, .banner .container, nav {
+		text-align: left;
+		margin: 0px 30px;
+	}
+
+	.site-brand {
+		margin-top: 20px;
+	}
+
+	nav {
+		float: right;
+		position: relative;
+		top: -70px;
+		margin-right: 30px;
+	}
+
+	.site-brand-img {
+		float: left;
+		margin: 0;
+		margin-right: 30px;
+	}
+
+	.site-title {
+		padding-top: 30px;
+	}
+}

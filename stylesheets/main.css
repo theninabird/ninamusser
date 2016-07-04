@@ -1,0 +1,745 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+/* line 1, ../sass/partials/_reset.scss */
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+/* line 20, ../sass/partials/_reset.scss */
+:focus {
+  outline: 0;
+}
+
+/* line 23, ../sass/partials/_reset.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+/* line 28, ../sass/partials/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+/* line 32, ../sass/partials/_reset.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* line 36, ../sass/partials/_reset.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+/* line 40, ../sass/partials/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+/* line 44, ../sass/partials/_reset.scss */
+blockquote, q {
+  quotes: "" "";
+}
+
+/* line 5, ../sass/partials/_base.scss */
+html, body {
+  font-family: Arial;
+  font-size: 16px;
+}
+
+/* line 10, ../sass/partials/_base.scss */
+body {
+  margin-bottom: 50px;
+}
+
+/* line 14, ../sass/partials/_base.scss */
+p {
+  line-height: 1.7;
+  padding: 10px 0 10px 0;
+}
+
+/* line 19, ../sass/partials/_base.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 23, ../sass/partials/_base.scss */
+.light {
+  font-weight: 300;
+}
+
+/* line 27, ../sass/partials/_base.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 31, ../sass/partials/_base.scss */
+h3 {
+  font-size: 1.5em;
+}
+
+/* line 35, ../sass/partials/_base.scss */
+.larger-text {
+  font-size: 1.3em;
+}
+
+@media (min-width: 800px) {
+  /* line 40, ../sass/partials/_base.scss */
+  p {
+    font-size: 16px;
+  }
+}
+/* line 21, ../../../Ruby21/lib/ruby/gems/2.1.0/gems/susy-2.2.7/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 10, ../sass/partials/_grids.scss */
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../Ruby21/lib/ruby/gems/2.1.0/gems/susy-2.2.7/sass/susy/output/support/_clearfix.scss */
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+@media (min-width: 800px) {
+  /* line 15, ../sass/partials/_grids.scss */
+  .container {
+    max-width: 100%;
+  }
+}
+/* line 3, ../sass/partials/_nav.scss */
+.menu-icon {
+  width: 32px;
+  margin: 10px;
+}
+
+/* line 8, ../sass/partials/_nav.scss */
+nav {
+  font-family: 'Open Sans Condensed';
+  text-transform: uppercase;
+}
+
+/* line 13, ../sass/partials/_nav.scss */
+nav li a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+/* line 19, ../sass/partials/_nav.scss */
+nav li:hover {
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+/* line 24, ../sass/partials/_nav.scss */
+nav li:hover a {
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+/* line 31, ../sass/partials/_nav.scss */
+.dropdown {
+  display: none;
+  background: white;
+  z-index: 1;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 100px;
+}
+
+/* line 40, ../sass/partials/_nav.scss */
+.dropdown.visible {
+  display: block;
+}
+
+/* line 44, ../sass/partials/_nav.scss */
+.dropdown li {
+  display: block;
+  padding: 10px 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+@media (min-width: 520px) {
+  /* line 51, ../sass/partials/_nav.scss */
+  .menu-icon {
+    display: none;
+  }
+
+  /* line 55, ../sass/partials/_nav.scss */
+  .dropdown {
+    display: block !important;
+    padding: 10px 0 10px 0;
+    background: none;
+    margin-bottom: 0;
+  }
+
+  /* line 62, ../sass/partials/_nav.scss */
+  .dropdown li {
+    display: inline-block;
+    border: none;
+  }
+
+  /* line 67, ../sass/partials/_nav.scss */
+  .dropdown li a {
+    text-align: center;
+  }
+
+  /* line 71, ../sass/partials/_nav.scss */
+  nav li:hover {
+    background: white;
+  }
+
+  /* line 75, ../sass/partials/_nav.scss */
+  nav li a:hover {
+    -moz-transition-property: color;
+    -o-transition-property: color;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -moz-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+
+  /* line 81, ../sass/partials/_nav.scss */
+  nav a.active:before {
+    content: '\2736';
+  }
+}
+@media (min-width: 1075px) {
+  /* line 87, ../sass/partials/_nav.scss */
+  .dropdown li a {
+    padding: 10px 18px;
+  }
+}
+/* 
+	LEVEL ONE
+*/
+/* line 5, ../sass/partials/_dropdown.scss */
+ul.dropdown {
+  position: relative;
+}
+
+/* line 6, ../sass/partials/_dropdown.scss */
+ul.dropdown li {
+  zoom: 1;
+}
+
+/* line 7, ../sass/partials/_dropdown.scss */
+ul.dropdown li a {
+  display: block;
+}
+
+/* line 8, ../sass/partials/_dropdown.scss */
+ul.dropdown li:last-child a {
+  border-right: none;
+}
+
+/* Doesn't work in IE */
+/* line 9, ../sass/partials/_dropdown.scss */
+ul.dropdown li.hover,
+ul.dropdown li:hover {
+  color: black;
+  position: relative;
+}
+
+/* 
+	LEVEL TWO
+*/
+/* line 16, ../sass/partials/_dropdown.scss */
+.dropdown-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #6E7180;
+  position: relative;
+  top: -2px;
+}
+
+/* line 19, ../sass/partials/_dropdown.scss */
+ul.dropdown ul {
+  display: none;
+  padding: 10px 0 0 0;
+}
+
+/* line 20, ../sass/partials/_dropdown.scss */
+ul.dropdown ul li {
+  border: none;
+}
+
+@media (min-width: 520px) {
+  /* 
+  	LEVEL TWO
+  */
+  /* line 26, ../sass/partials/_dropdown.scss */
+  .dropdown-arrow {
+    display: none;
+  }
+
+  /* line 27, ../sass/partials/_dropdown.scss */
+  ul.dropdown ul {
+    width: 180px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+  }
+
+  /* line 29, ../sass/partials/_dropdown.scss */
+  ul.dropdown ul li {
+    font-weight: normal;
+    background: #fff;
+    color: #000;
+    border-bottom: 1px solid #f1f1f1;
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  /* line 32, ../sass/partials/_dropdown.scss */
+  ul.dropdown ul li:hover {
+    background: #f1f1f1;
+  }
+
+  /* line 33, ../sass/partials/_dropdown.scss */
+  ul.dropdown ul li a {
+    color: #99A4B4;
+    font-size: .9em;
+  }
+
+  /* IE 6 & 7 Needs Inline Block */
+  /* line 36, ../sass/partials/_dropdown.scss */
+  ul.dropdown ul li a {
+    border-right: none;
+    width: 100%;
+    display: inline-block;
+  }
+}
+/* If nav is collapsed, keep sub-menus visible once opened */
+@media (max-width: 519px) {
+  /* line 42, ../sass/partials/_dropdown.scss */
+  ul.dropdown ul {
+    visibility: visible !important;
+  }
+}
+/* line 5, ../sass/partials/_header.scss */
+.banner, .banner .container, nav {
+  height: auto;
+  text-align: center;
+}
+
+/* line 11, ../sass/partials/_header.scss */
+.site-brand-img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 10px auto;
+  background-size: 150px;
+}
+
+/* line 19, ../sass/partials/_header.scss */
+.site-title-top {
+  font-family: 'Raleway';
+  font-weight: 300;
+  font-size: 28px;
+}
+
+/* line 25, ../sass/partials/_header.scss */
+.site-title-bottom {
+  font-family: 'Open Sans Condensed';
+  font-size: 28px;
+}
+
+/* line 30, ../sass/partials/_header.scss */
+nav {
+  height: auto;
+}
+
+@media (min-width: 1075px) {
+  /* line 47, ../sass/partials/_header.scss */
+  .banner, .banner .container, nav {
+    text-align: left;
+    margin: 0px 30px;
+  }
+
+  /* line 52, ../sass/partials/_header.scss */
+  .site-brand {
+    margin-top: 20px;
+  }
+
+  /* line 56, ../sass/partials/_header.scss */
+  nav {
+    float: right;
+    position: relative;
+    top: -70px;
+    margin-right: 30px;
+  }
+
+  /* line 63, ../sass/partials/_header.scss */
+  .site-brand-img {
+    float: left;
+    margin: 0;
+    margin-right: 30px;
+  }
+
+  /* line 69, ../sass/partials/_header.scss */
+  .site-title {
+    padding-top: 30px;
+  }
+}
+/* line 4, ../sass/partials/_hero.scss */
+.hero {
+  width: 100%;
+  background-position: 50% 30%;
+  background-size: 200%;
+}
+
+/* line 10, ../sass/partials/_hero.scss */
+.hero-content-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-align: center;
+  height: 350px;
+}
+/* line 12, ../../../Ruby21/lib/ruby/gems/2.1.0/gems/susy-2.2.7/sass/susy/output/support/_clearfix.scss */
+.hero-content-container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 20, ../sass/partials/_hero.scss */
+.hero-content a.button {
+  border: 2px solid white;
+  padding: 10px;
+  cursor: pointer;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  font-weight: bold;
+  margin: 0 10px 0 10px;
+  display: inline-block;
+  width: 170px;
+}
+
+/* line 31, ../sass/partials/_hero.scss */
+.hero-content a.button:hover {
+  background: white;
+  color: #777777;
+  -moz-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+@media (min-width: 500px) {
+  /* line 39, ../sass/partials/_hero.scss */
+  .hero {
+    background-size: 150%;
+  }
+
+  /* line 43, ../sass/partials/_hero.scss */
+  .hero-content-container {
+    height: 350px;
+  }
+}
+@media (min-width: 865px) {
+  /* line 49, ../sass/partials/_hero.scss */
+  .hero {
+    background-size: 100%;
+  }
+
+  /* line 53, ../sass/partials/_hero.scss */
+  .hero-content-container {
+    height: 500px;
+  }
+}
+/* line 3, ../sass/partials/_page-content.scss */
+.page-content {
+  padding: 40px 20px 20px 20px;
+  clear: both;
+}
+
+/* line 8, ../sass/partials/_page-content.scss */
+.page-content a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* line 13, ../sass/partials/_page-content.scss */
+.page-content a:hover {
+  opacity: .8;
+  -moz-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+
+/* line 18, ../sass/partials/_page-content.scss */
+.page-title {
+  text-align: center;
+  font-family: 'Roboto Slab';
+  text-transform: lowercase;
+}
+
+/* line 24, ../sass/partials/_page-content.scss */
+.page-title h1 {
+  padding: 30px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  color: white;
+}
+
+@media (min-width: 520px) {
+  /* line 31, ../sass/partials/_page-content.scss */
+  .page-content {
+    padding: 0 15%;
+  }
+}
+/* line 1, ../sass/pages/_home.scss */
+body.home .site-brand-img {
+  background-image: url("../images/n01.png");
+}
+
+/* line 17, ../sass/modules/_utils.scss */
+body.home .page-title h1 {
+  background: #2082af;
+}
+/* line 21, ../sass/modules/_utils.scss */
+body.home nav a.active {
+  color: #2082af;
+}
+/* line 25, ../sass/modules/_utils.scss */
+body.home nav li:hover {
+  background: #2082af;
+}
+/* line 27, ../sass/modules/_utils.scss */
+body.home nav li:hover a {
+  color: white;
+}
+@media (min-width: 520px) {
+  /* line 33, ../sass/modules/_utils.scss */
+  body.home nav li:hover {
+    background: none;
+  }
+  /* line 35, ../sass/modules/_utils.scss */
+  body.home nav li:hover a {
+    color: #2082af;
+  }
+  /* line 40, ../sass/modules/_utils.scss */
+  body.home nav li a:hover {
+    color: #2082af;
+  }
+}
+/* line 45, ../sass/modules/_utils.scss */
+body.home .page-content a {
+  color: #2082af;
+}
+
+/* line 1, ../sass/pages/_web.scss */
+body.web .site-brand-img {
+  background-image: url("../images/n02.png");
+}
+
+/* line 17, ../sass/modules/_utils.scss */
+body.web .page-title h1 {
+  background: #ffb710;
+}
+/* line 21, ../sass/modules/_utils.scss */
+body.web nav a.active {
+  color: #ffb710;
+}
+/* line 25, ../sass/modules/_utils.scss */
+body.web nav li:hover {
+  background: #ffb710;
+}
+/* line 27, ../sass/modules/_utils.scss */
+body.web nav li:hover a {
+  color: white;
+}
+@media (min-width: 520px) {
+  /* line 33, ../sass/modules/_utils.scss */
+  body.web nav li:hover {
+    background: none;
+  }
+  /* line 35, ../sass/modules/_utils.scss */
+  body.web nav li:hover a {
+    color: #ffb710;
+  }
+  /* line 40, ../sass/modules/_utils.scss */
+  body.web nav li a:hover {
+    color: #ffb710;
+  }
+}
+/* line 45, ../sass/modules/_utils.scss */
+body.web .page-content a {
+  color: #ffb710;
+}
+
+/* line 1, ../sass/pages/_about.scss */
+body.about .site-brand-img {
+  background-image: url("../images/n03.png");
+}
+
+/* line 17, ../sass/modules/_utils.scss */
+body.about .page-title h1 {
+  background: #ff5500;
+}
+/* line 21, ../sass/modules/_utils.scss */
+body.about nav a.active {
+  color: #ff5500;
+}
+/* line 25, ../sass/modules/_utils.scss */
+body.about nav li:hover {
+  background: #ff5500;
+}
+/* line 27, ../sass/modules/_utils.scss */
+body.about nav li:hover a {
+  color: white;
+}
+@media (min-width: 520px) {
+  /* line 33, ../sass/modules/_utils.scss */
+  body.about nav li:hover {
+    background: none;
+  }
+  /* line 35, ../sass/modules/_utils.scss */
+  body.about nav li:hover a {
+    color: #ff5500;
+  }
+  /* line 40, ../sass/modules/_utils.scss */
+  body.about nav li a:hover {
+    color: #ff5500;
+  }
+}
+/* line 45, ../sass/modules/_utils.scss */
+body.about .page-content a {
+  color: #ff5500;
+}
+
+/* line 9, ../sass/pages/_about.scss */
+.about-image {
+  text-align: center;
+}
+
+/* line 13, ../sass/pages/_about.scss */
+.about-image img {
+  width: 100%;
+}
+
+/* line 17, ../sass/pages/_about.scss */
+.about-text {
+  text-align: center;
+}
+
+/* line 21, ../sass/pages/_about.scss */
+.about-text p {
+  font-family: 'Roboto Slab';
+  font-size: 20px;
+  color: #555;
+}
+
+/* line 27, ../sass/pages/_about.scss */
+.social-media img {
+  margin: 0 10px;
+}
+
+/* line 31, ../sass/pages/_about.scss */
+.social-media img:hover {
+  opacity: .8;
+  -moz-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+
+@media (min-width: 750px) {
+  /* line 37, ../sass/pages/_about.scss */
+  .about-row {
+    display: flex;
+  }
+
+  /* line 41, ../sass/pages/_about.scss */
+  .about-image {
+    flex: 1;
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+
+  /* line 46, ../sass/pages/_about.scss */
+  .about-text-wrapper {
+    flex: 1;
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,45 @@
+@import "compass";
+/* 
+	LEVEL ONE
+*/
+ul.dropdown                         { position: relative; }
+ul.dropdown li                      { zoom: 1; }
+ul.dropdown li a                    { display: block; }
+ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
+ul.dropdown li.hover,
+ul.dropdown li:hover                { color: black; position: relative; }
+ul.dropdown li.hover a              { }
+
+/* 
+	LEVEL TWO
+*/
+.dropdown-arrow						{ display: inline-block; width: 0; height: 0; border-left: 5px solid transparent; 
+									  border-right: 5px solid transparent; border-top: 5px solid #6E7180; 
+									  position: relative; top: -2px; }
+ul.dropdown ul 						{ display: none; padding: 10px 0 0 0; }
+ul.dropdown ul li					{ border: none; }
+
+@media (min-width: 520px) {
+	/* 
+		LEVEL TWO
+	*/
+	.dropdown-arrow						{ display: none; }
+	ul.dropdown ul 						{ width: 180px; display: none; position: absolute; top: 100%; left: 0;
+										  padding: 0; @include box-shadow(0 0 7px rgba(0, 0, 0, 0.3)); }
+	ul.dropdown ul li 					{ font-weight: normal; background: #fff; color: #000; 
+										  border-bottom: 1px solid #f1f1f1; float: none; display: block;
+										  text-align: left; }
+	ul.dropdown ul li:hover				{ background: #f1f1f1; }
+	ul.dropdown ul li a					{ color: #99A4B4; font-size: .9em; }								  
+										  
+	                                    /* IE 6 & 7 Needs Inline Block */
+	ul.dropdown ul li a					{ border-right: none; width: 100%; display: inline-block; }
+}
+
+
+/* If nav is collapsed, keep sub-menus visible once opened */
+@media (max-width: 519px) {
+	ul.dropdown ul {
+		visibility: visible !important;
+	}
+}

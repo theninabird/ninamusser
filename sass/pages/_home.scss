@@ -1,0 +1,7 @@
+body.home .site-brand-img {
+	background-image: url('../images/n01.png');
+}
+
+body.home {
+	@include page-color(#2082af);
+}

@@ -1,0 +1,43 @@
+@import "modules/all";
+
+$base-font-size: 16px;
+
+html, body {
+	font-family: Arial;
+	font-size: $base-font-size;
+}
+
+body {
+	margin-bottom: 50px;
+}
+
+p {
+	line-height: 1.7;
+	padding: 10px 0 10px 0;
+}
+
+strong {
+	font-weight: bold;
+}
+
+.light {
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+.larger-text {
+	font-size: 1.3em;
+}
+
+@media (min-width: 800px) {
+	p {
+		font-size: 16px;
+	}
+}

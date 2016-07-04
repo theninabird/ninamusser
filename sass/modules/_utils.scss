@@ -1,0 +1,48 @@
+@mixin vertical-align {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+ -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+      border-radius: $radius;
+}
+
+@mixin page-color($color) {
+	.page-title h1 {
+	background: $color;
+	}
+
+	nav a.active {
+		color: $color;
+	}
+
+	nav li:hover {
+		background: $color;
+		a {
+			color: white;
+		}
+	}
+
+	@media (min-width: 520px) {
+		nav li:hover {
+			background: none;
+			a {
+				color: $color;
+			}
+		}
+
+		nav li a:hover {
+			color: $color;
+		}
+	}
+
+	.page-content a {
+		color: $color;
+	}
+}
