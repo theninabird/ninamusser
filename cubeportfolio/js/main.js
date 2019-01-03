@@ -73,10 +73,10 @@ $('#js-grid-illustration').cubeportfolio({
             cols: 5
         }, {
             width: 1100,
-            cols: 4
+            cols: 5
         }, {
             width: 800,
-            cols: 3
+            cols: 4
         }, {
             width: 480,
             cols: 2
@@ -122,5 +122,5 @@ $('#js-grid-illustration').cubeportfolio({
                     t.updateSinglePageInline('AJAX Error! Please refresh the page!');
                 });
         },
-    });    
+    });
 })(jQuery, window, document);
