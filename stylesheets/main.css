@@ -113,7 +113,6 @@ h3 {
 }
 /* line 21, ../../../Ruby21/lib/ruby/gems/2.1.0/gems/susy-2.2.7/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -158,30 +157,24 @@ nav li a {
 
 /* line 19, ../sass/partials/_nav.scss */
 nav li:hover {
-  -moz-transition-property: background;
   -o-transition-property: background;
   -webkit-transition-property: background;
   transition-property: background;
-  -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
-  -moz-transition-timing-function: ease-in;
   -o-transition-timing-function: ease-in;
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
 /* line 24, ../sass/partials/_nav.scss */
 nav li:hover a {
-  -moz-transition-property: color;
   -o-transition-property: color;
   -webkit-transition-property: color;
   transition-property: color;
-  -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
-  -moz-transition-timing-function: ease-in;
   -o-transition-timing-function: ease-in;
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
@@ -241,15 +234,12 @@ nav li:hover a {
 
   /* line 75, ../sass/partials/_nav.scss */
   nav li a:hover {
-    -moz-transition-property: color;
     -o-transition-property: color;
     -webkit-transition-property: color;
     transition-property: color;
-    -moz-transition-duration: 0.2s;
     -o-transition-duration: 0.2s;
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
-    -moz-transition-timing-function: ease-in;
     -o-transition-timing-function: ease-in;
     -webkit-transition-timing-function: ease-in;
     transition-timing-function: ease-in;
@@ -340,7 +330,6 @@ ul.dropdown ul li {
     top: 100%;
     left: 0;
     padding: 0;
-    -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
   }
@@ -475,8 +464,6 @@ nav {
   border: 2px solid white;
   padding: 10px;
   cursor: pointer;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
   border-radius: 50px;
   font-weight: bold;
   margin: 0 10px 0 10px;
@@ -488,11 +475,9 @@ nav {
 .hero-content a.button:hover {
   background: white;
   color: #777777;
-  -moz-transition: background 0.5s;
   -o-transition: background 0.5s;
   -webkit-transition: background 0.5s;
   transition: background 0.5s;
-  -moz-transition: color 0.5s;
   -o-transition: color 0.5s;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
@@ -535,7 +520,6 @@ nav {
 /* line 13, ../sass/partials/_page-content.scss */
 .page-content a:hover {
   opacity: .8;
-  -moz-transition: opacity 0.2s ease-in;
   -o-transition: opacity 0.2s ease-in;
   -webkit-transition: opacity 0.2s ease-in;
   transition: opacity 0.2s ease-in;
@@ -550,11 +534,11 @@ nav {
 
 /* line 24, ../sass/partials/_page-content.scss */
 .page-title h1 {
-  padding: 30px;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
+  /* padding: 30px; */
+  /* -moz-border-radius: 15px;
+  -webkit-border-radius: 15px; */
   border-radius: 15px;
-  color: white;
+  color: #333;
 }
 
 @media (min-width: 520px) {
@@ -570,7 +554,7 @@ body.home .site-brand-img {
 
 /* line 17, ../sass/modules/_utils.scss */
 body.home .page-title h1 {
-  background: #2082af;
+  /* background: #2082af; */
 }
 /* line 21, ../sass/modules/_utils.scss */
 body.home nav a.active {
@@ -713,7 +697,6 @@ body.about .page-content a {
 /* line 31, ../sass/pages/_about.scss */
 .social-media img:hover {
   opacity: .8;
-  -moz-transition: opacity 0.2s ease-in;
   -o-transition: opacity 0.2s ease-in;
   -webkit-transition: opacity 0.2s ease-in;
   transition: opacity 0.2s ease-in;
@@ -722,12 +705,16 @@ body.about .page-content a {
 @media (min-width: 750px) {
   /* line 37, ../sass/pages/_about.scss */
   .about-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
   /* line 41, ../sass/pages/_about.scss */
   .about-image {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     width: 49.15254%;
     float: left;
     margin-right: 1.69492%;
@@ -735,12 +722,21 @@ body.about .page-content a {
 
   /* line 46, ../sass/pages/_about.scss */
   .about-text-wrapper {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     width: 49.15254%;
     float: right;
     margin-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
