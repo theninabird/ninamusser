@@ -146,6 +146,7 @@ h3 {
 /* line 8, ../sass/partials/_nav.scss */
 nav {
   font-family: 'Arvo';
+  text-transform: lowercase;
 }
 
 /* line 13, ../sass/partials/_nav.scss */
