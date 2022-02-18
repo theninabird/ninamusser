@@ -144,15 +144,14 @@ h3 {
 
 /* line 8, ../sass/partials/_nav.scss */
 nav {
-  font-family: 'Open Sans Condensed';
-  text-transform: uppercase;
+  font-family: 'Raleway';
 }
 
 /* line 13, ../sass/partials/_nav.scss */
 nav li a {
   text-decoration: none;
   color: black;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 /* line 19, ../sass/partials/_nav.scss */
@@ -745,9 +744,7 @@ body.about .page-content a {
   display: none;
   cursor: pointer;
   background: black;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
+  padding: 20px;
   position: fixed;
   bottom: 24px;
   right: 24px;
