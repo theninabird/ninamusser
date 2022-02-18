@@ -23,7 +23,7 @@
 	<script type="text/javascript" language="javascript" src="js/dropdown.js"></script>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<title>Nina Musser | Illustration</title>
+	<title>Nina Musser | Portfolio</title>
 </head>
 <body class="home">
 		<header class="banner">
@@ -33,15 +33,47 @@
 					</div>
 					<div class="site-title">
 						<span class="site-title-top">nina musser</span><hr/>
+						<nav class="navigation collapse">
+						<a href="#menu">
+							<img src="images/menu.png" class="menu-icon"/>
+						</a>
+							<ul class="dropdown">
+								<li><a href="/animation/" class="active">Animation + Char Design</a></li>
+								<li><a href="/pets/">Pet Portraits</a></li>
+								<li><a href="/illustration/">Illustration</a></li>
+								<li><a href="/about/">About</a></li>
+							</ul>
+						</nav>
 					</div>
 				</div>
 			</div>
 		</header>
 		<div class="page-content">
-			<div class="page-title">
-				<h1>gone fishing</h1>
-                <p>In the meantime: <a href="https://instagram.com/theninabird" target="_blank">instagram.com/theninabird</a></p>
+			<style>
+				.images {
+					text-align: center;
+				}
+				.images > * {
+					/* display: block; */
+					/* max-width: 100%; */
+					margin: 0 auto;
+					margin-bottom: 48px;
+				}
+			</style>
+			<div class="images">
+				<img src="images/animations/ocelot.gif">
+				<img src="images/animations/head-turn.gif">
+				<img src="images/animations/walk.gif">
+				<img src="images/animations/corgis.jpg" width="600">
+				<img src="images/animations/hw-final-2-share.jpg">
+				<img src="images/animations/purple-flame.gif">
+				<img src="images/animations/tulip-designs.jpg">
+				<img src="images/animations/bat_tumblr.gif">
+				<video width="600" controls>
+					<source src="images/animations/kitty.mp4" type="video/mp4">
+				</video>
 			</div>
     	</div>
+		<div id="backtotop"></div>
 </body>
 </html>
