@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400);
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 /* line 1, ../sass/partials/_reset.scss */
 html, body, div, span, applet, object, iframe,
 p, blockquote, pre,
@@ -144,7 +145,7 @@ h3 {
 
 /* line 8, ../sass/partials/_nav.scss */
 nav {
-  font-family: 'Raleway';
+  font-family: 'Arvo';
 }
 
 /* line 13, ../sass/partials/_nav.scss */
@@ -387,7 +388,7 @@ ul.dropdown ul li {
 
 /* line 19, ../sass/partials/_header.scss */
 .site-title-top {
-  font-family: 'Raleway';
+  font-family: 'Arvo';
   font-weight: 300;
   font-size: 28px;
 }
