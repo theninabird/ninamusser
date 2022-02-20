@@ -25,7 +25,7 @@ $(window).on('scroll', function(){
 		}, 1000);
 	}
 
-	if ( scrollTop == 0 ) {
+	if ( $(window).scrollTop == 0 ) {
 		$('#backtotop').fadeOut();
 	}
 });
